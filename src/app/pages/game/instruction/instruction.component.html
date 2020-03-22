@@ -1,0 +1,53 @@
+<header>
+    <app-game-header title="Instructions"></app-game-header>
+</header>
+
+<div class="body">
+    <h2>
+        <ul>
+            <li>Everybody close your eyes.</li>
+            <ng-container *ngIf="game.isSocialistGame; else notSocialistGame">
+                <ng-container *ngIf="game.players.length <= 8; else greaterThanEightPlayer">
+                    <li>Extend your hands into a fist in front of you.</li>
+                    <li>All Fascists who are NOT Hitler should open their eyes and acknowledge each other.</li>
+                    <li>Hitler - keep your eyes closed but put your thumb out into a thumbs-up gesture.</li>
+                    <li>Fascists, take note of who has an extended thumb - that player is Hitler.</li>
+                    <li><i>[Take a long break]</i></li>
+                    <li>Everyone close your eyes and put your hands down.</li>
+                </ng-container>
+                <ng-template #greaterThanEightPlayer>
+                    <li>Extend your hands into a fist in front of you.</li>
+                    <li>Socialists, open your eyes and acknowledge each other.</li>
+                    <li><i>[Take a long break]</i></li>
+                    <li>Everyone close your eyes again.</li>
+                    <li>All Fascists who are NOT Hitler should open their eyes and acknowledge each other.</li>
+                    <li>Hitler - keep your eyes closed but put your thumb out into a thumbs-up gesture.</li>
+                    <li>Fascists, take note of who has an extended thumb - that player is Hitler.</li>
+                    <li><i>[Take a long break]</i></li>
+                    <li>Everyone close your eyes and put your hands down.</li>
+                </ng-template>
+            </ng-container>
+            <ng-template #notSocialistGame>
+                <ng-container *ngIf="game.players.length <= 6; else greaterThanSevenPlayer">
+                    <li>Fascist and Hitler, open your eyes and acknowledge each other.</li>
+                    <li><i>[Take a long break]</i></li>
+                    <li>Everyone close your eyes.</li>
+                </ng-container>
+                <ng-template #greaterThanSevenPlayer>
+                    <li>Extend your hands into a fist in front of you.</li>
+                    <li>All Fascists who are NOT Hitler should open their eyes and acknowledge each other.</li>
+                    <li>Hitler - keep your eyes closed but put your thumb out into a thumbs-up gesture.</li>
+                    <li>Fascists, take note of who has an extended thumb - that player is Hitler.</li>
+                    <li><i>[Take a long break]</i></li>
+                    <li>Everyone close your eyes and put your hands down.</li>
+                </ng-template>
+            </ng-template>
+            <li>Everyone can open your eyes. If anyone is confused or something went wrong, please tell the group now.</li>
+        </ul>
+    </h2>
+</div>
+
+<footer>
+    <button mat-raised-button [routerLink]="[ '/game/check-list' ]" color="primary">Back to checklist</button>
+    <button mat-raised-button [routerLink]="[ '/game/election' ]" color="accent">Continue</button>
+</footer>

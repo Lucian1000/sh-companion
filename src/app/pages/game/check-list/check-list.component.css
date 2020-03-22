@@ -1,0 +1,28 @@
+.body {
+    min-height: calc(100% - 56px - 36px);
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 10px;
+}
+
+mat-card {
+    margin: 10px;
+}
+
+footer {
+    position: -webkit-sticky; /* Safari */  
+    position: sticky;
+    bottom: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+footer button {
+    margin: 0 5px 0 5px;
+    width: 150px;
+}

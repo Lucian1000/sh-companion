@@ -1,0 +1,22 @@
+<header>
+    <app-game-header title="Election"></app-game-header>
+</header>
+
+<div class="body">
+    <mat-card class="presidency-card">
+        <h2>The first president is</h2>
+        <div *ngIf="showPresident">
+            <h1 [ngStyle]="{'color': color}">{{president.name}}</h1>
+            <p>{{presidencyText}}</p>
+        </div>
+    </mat-card>
+    <mat-divider></mat-divider>
+    <mat-card>
+        <h2>Now that you have your first president you are good to go. If you found a bug or some other error in this app, leave an Issue on the following Github page:</h2>
+    </mat-card>
+</div>
+
+<footer>
+    <button mat-raised-button [routerLink]="[ '/game/instruction' ]" color="primary">Back to instructions</button>
+    <button mat-raised-button [routerLink]="[ '/home' ]" color="accent">Finish</button>
+</footer>

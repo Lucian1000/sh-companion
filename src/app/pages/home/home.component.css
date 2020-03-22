@@ -1,0 +1,24 @@
+.body {
+    min-height: 85%;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.game-start {
+    text-align: center;
+}
+
+#logo {
+    position: relative;
+    left: -20%;
+    margin-bottom: 10px;
+}
+
+.home-button {
+    width: 170px;
+    margin: 10px;
+}
+
+.footer {
+    text-align: center;
+}
