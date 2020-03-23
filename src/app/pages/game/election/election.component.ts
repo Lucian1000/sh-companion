@@ -25,7 +25,7 @@ export class ElectionComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       const random = this.getRandom();
-      this.color = random === 0 ? 'red' : 'blue';
+      this.color = random === 0 ? 'rgb(244, 67, 54)' : '#00bcd4';
       this.presidencyText = random === 0 ? 'May he/she reign fascistly!' : 'May he/she reign liberally!';
       this.showPresident = true;
     }, 2000);

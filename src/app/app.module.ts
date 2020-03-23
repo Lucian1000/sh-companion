@@ -28,6 +28,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ElectionComponent } from './pages/game/election/election.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -43,10 +44,10 @@ import { ElectionComponent } from './pages/game/election/election.component';
   ],
   imports: [
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    AppRoutingModule,
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     PlatformModule,
     HttpClientModule,
     /*Angular Material*/
@@ -61,6 +62,7 @@ import { ElectionComponent } from './pages/game/election/election.component';
     MatTableModule,
     MatCardModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

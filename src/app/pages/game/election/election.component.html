@@ -5,15 +5,21 @@
 <div class="body">
     <mat-card class="presidency-card">
         <h2>The first president is</h2>
-        <div *ngIf="showPresident">
+        <div *ngIf="showPresident; else loading">
             <h1 [ngStyle]="{'color': color}">{{president.name}}</h1>
             <p>{{presidencyText}}</p>
         </div>
+        <ng-template #loading>
+            <mat-progress-spinner
+                color="accent"
+                mode="indeterminate">
+            </mat-progress-spinner>
+        </ng-template>
     </mat-card>
     <mat-divider></mat-divider>
     <mat-card>
-        <h2>Now that you have your first president you are good to go. If you found a bug or some other error in this app, leave an Issue on the following Github page:</h2>
-        <h4><a href="https://github.com/Lucian1000/sh-companion">"https://github.com/Lucian1000/sh-companion</a></h4>
+        <h4>Now that you have your first president you are good to go. If you found a bug or some other error in this app, leave an Issue on the following Github page:</h4>
+        <h4><a href="https://github.com/Lucian1000/sh-companion">https://github.com/Lucian1000/sh-companion</a></h4>
         <h2>Thank you for using this app!</h2>
     </mat-card>
 </div>

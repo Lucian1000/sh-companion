@@ -1,5 +1,5 @@
 <ng-container *ngIf="platform.ANDROID || platform.IOS; else notMobile">
-    <router-outlet #outlet="outlet"></router-outlet>
+    <router-outlet></router-outlet>
 </ng-container>
 <ng-template #notMobile>
     <app-not-mobile></app-not-mobile>

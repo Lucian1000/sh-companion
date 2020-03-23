@@ -34,7 +34,7 @@
                 <mat-checkbox color="primary">Prepared 1 Hitler Secret Role card</mat-checkbox><br/>
             </mat-card>
             <mat-divider></mat-divider>
-            <mat-card>
+            <mat-card id="last-card">
                 <h2>Boards</h2>
                 
                 <ng-container [ngSwitch]="game.players.length">
@@ -104,7 +104,7 @@
                 <mat-checkbox color="primary">Prepared 1 Hitler Secret Role card</mat-checkbox><br/>
             </mat-card>
             <mat-divider></mat-divider>
-            <mat-card>
+            <mat-card id="last-card">
                 <h2>Boards</h2>
                 <mat-checkbox>Prepared liberal board</mat-checkbox><br/>
                 <ng-container [ngSwitch]="game.players.length">

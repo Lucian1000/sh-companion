@@ -1,5 +1,5 @@
 .body {
-    min-height: calc(100% - 56px - 36px);
+    min-height: calc(100% - 56px - 36px - 25px);
     text-align: left;
     overflow: hidden;
     position: relative;
@@ -17,7 +17,7 @@ mat-card {
 footer {
     position: -webkit-sticky; /* Safari */  
     position: sticky;
-    bottom: 5px;
+    bottom: 25px;
     text-align: center;
     margin-bottom: 5px;
 }
@@ -25,4 +25,8 @@ footer {
 footer button {
     margin: 0 5px 0 5px;
     width: 150px;
+}
+
+#last-card {
+    margin-bottom: 35px;
 }

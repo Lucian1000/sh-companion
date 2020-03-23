@@ -10,11 +10,11 @@ import { ElectionComponent } from './pages/game/election/election.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'game/start', component: StartComponent },
-  { path: 'game/check-list', component: CheckListComponent },
-  { path: 'game/instruction', component: InstructionComponent },
-  { path: 'game/election', component: ElectionComponent },
+  { path: 'home', component: HomeComponent, data: {animation: 'HomePage'} },
+  { path: 'game/start', component: StartComponent, data: {animation: 'StartPage'} },
+  { path: 'game/check-list', component: CheckListComponent, data: {animation: 'CheckListPage'} },
+  { path: 'game/instruction', component: InstructionComponent, data: {animation: 'InstructionPage'} },
+  { path: 'game/election', component: ElectionComponent, data: {animation: 'ElectionPage'} },
   { path: '**', component: PageNotFoundComponent },
 ];
 

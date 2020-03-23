@@ -15,7 +15,7 @@ export class AppComponent implements AfterViewInit {
   constructor(
     public platform: Platform,
     public updateService: UpdateService,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
   ) {
   }
 
@@ -26,10 +26,5 @@ export class AppComponent implements AfterViewInit {
         verticalPosition: "bottom"
       });
     }
-  }
-
-  prepareRoute(outlet: RouterOutlet) {
-    console.log(outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']);
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 }
