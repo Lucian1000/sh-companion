@@ -1,7 +1,7 @@
 .body {
     margin-top: 10px;
     margin-right: 10px;
-    min-height: calc(100% - 56px - 36px - 25px);
+    min-height: calc(100% - 56px - 36px - 35px);
     overflow: hidden;
     position: relative;
     margin-bottom: 15px;
