@@ -13,7 +13,7 @@ export class UpdateService {
       // lazy way of disabling service workers while developing
       if ('serviceWorker' in navigator && ['localhost', '127'].indexOf(location.hostname) === -1) {
         // register service worker file
-        navigator.serviceWorker.register('service-worker.js')
+        navigator.serviceWorker.register('ngsw-worker.js')
           .then(reg => {
             reg.onupdatefound = () => {
               const installingWorker = reg.installing;
